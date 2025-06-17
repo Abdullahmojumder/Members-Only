@@ -1,0 +1,13 @@
+<h2>Join the Club</h2>
+<% if (errors.length > 0) { %>
+  <ul>
+    <% errors.forEach(error => { %>
+      <li><%= error.msg %></li>
+    <% }) %>
+  </ul>
+<% } %>
+<form method="POST" action="/auth/join">
+  <label for="passcode">Club Passcode:</label>
+  <input type="text" id="passcode" name="passcode" required>
+  <button type="submit">Join</button>
+</form>
